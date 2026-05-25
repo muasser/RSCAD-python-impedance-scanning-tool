@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-Impedantie-extractie + GNC via eigenwaarden van L(jw)
-+ FSAT-style Bode plots (Yconv, Zconv=inv(Yconv), Zgrid) en eigenvalue bode.
+Impedance extraction + GNC via eigenvalues of L(jw)
++ FSAT-style Bode plots (Yconv, Zconv=inv(Yconv), Zgrid) and eigenvalue Bode plots.
 
-ROUTE A (RSCAD plotbuffer time-series via get_signal) + 2-run D/Q injectie
+ROUTE A (RSCAD plot-buffer time series via get_signal) + 2-run D/Q injection
 
-- Injectie: D-run en Q-run (zelfde frequentie), zodat V_exc 2x2 invertible is
+- Injection: D-run and Q-run at the same frequency, so V_exc is 2x2 invertible
 - Reset: PB & PB1 via .position (case STOP)
-- Lock-in phasor (synchronous detection)
-- Bouw Y_conv(jw), Z_grid(jw), L(jw)=Y*Z, eigenwaarden
+- Lock-in phasor extraction (synchronous detection)
+- Build Y_conv(jw), Z_grid(jw), L(jw)=Y*Z, and eigenvalues
 - Plots:
     * Bode: Ydd/Ydq/Yqd/Yqq
-    * Bode: Zconv = inv(Yconv)  (handig als FSAT Z toont)
+    * Bode: Zconv = inv(Yconv)  (useful when FSAT displays Z)
     * Bode: Zgrid
-    * Eigenvalue Bode (|λ|, ∠λ) van L(jw)
+    * Eigenvalue Bode (|λ|, ∠λ) of L(jw)
 """
 
 import time
